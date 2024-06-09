@@ -1,39 +1,69 @@
 settings:
-  title: 'Status Page'
+  title: '陈思源的状态页'
   url: 'https://status.csy2022.top' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '所有服务均正常运行'
+  notAllmonitorsOperational: '部分服务出现异常'
+  monitorLabelOperational: '正常'
+  monitorLabelNotOperational: '异常'
+  monitorLabelNoData: '未知'
+  dayInHistogramNoData: '未知'
+  dayInHistogramOperational: '一切正常'
+  dayInHistogramNotOperational: '异常' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: 主页 # unique identifier
+    name: csy2022.top
+    description: '' # default=empty
+    url: 'https://csy2022.top' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: ChatGPT代理站
+    name: chat.csy2022.top
+    description: ''
+    url: 'https://chat.csy2022.top'
     method: GET
     expectStatus: 200
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: 代码保存站
+    name: code.csy2022.top
+    url: 'https://code.csy2022.top'
+    method: GET
+    expectStatus: 200
+
+  - id: 24点计算器
+    name: 24.csy2022.top
+    url: 'https://24.csy2022.top'
+    method: GET
+    expectStatus: 200
+
+  - id: 博客
+    name: blog.csy2022.top
+    url: 'https://blog.csy2022.top'
+    method: GET
+    expectStatus: 200
+
+  - id: 在线网盘
+    name: drive.csy2022.top
+    url: 'https://drive.csy2022.top'
+    method: GET
+    expectStatus: 200
+
+  - id: RickROLL
+    name: rickroll.csy2022.top
+    url: 'https://rickroll.csy2022.top'
+    method: GET
+    expectStatus: 200
+
+  - id: Github代理站
+    name: ghproxy.csy2022.top
+    url: 'https://ghproxy.csy2022.top'
     method: GET
     expectStatus: 200
