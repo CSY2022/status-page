@@ -25,7 +25,7 @@ monitors:
     linkable: true # allows the title to be a link, default=true
 
   - id: ChatGPT代理站
-    name: chat.csy2022.top
+    name: chatgpt.csy2022.top
     description: ''
     url: 'https://chat.csy2022.top'
     method: GET
