@@ -73,3 +73,9 @@ monitors:
     url: 'https://11.csy2022.top'
     method: GET
     expectStatus: 200
+
+  - id: 2048
+    name: 2048.csy2022.top
+    url: 'https://2048.csy2022.top'
+    method: GET
+    expectStatus: 200
