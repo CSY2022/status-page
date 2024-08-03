@@ -24,13 +24,6 @@ monitors:
     followRedirect: false # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: ChatGPT代理站
-    name: chatgpt.csy2022.top
-    description: ''
-    url: 'https://chatgpt.csy2022.top'
-    method: GET
-    expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
 
   - id: 代码保存站
     name: code.csy2022.top
